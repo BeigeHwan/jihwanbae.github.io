@@ -49,10 +49,10 @@
 
           <!-- Other pages -->
           {% assign sorted_pages = site.pages | sort: 'nav_order' %}
-          {% assign seen_permalinks = '' %}
+          {% assign seen_permalinks = ',' %}
           {% for p in sorted_pages %}
             {% if p.nav and p.autogen == null %}
-              {% unless seen_permalinks contains p.permalink %}
+              {% unless seen_permalinks contains ',' | append: p.permalink | append: ',' %}
                 {% assign seen_permalinks = seen_permalinks | append: p.permalink | append: ',' %}
                 {% if p.dropdown %}
                   {% assign has_active_child = false %}
