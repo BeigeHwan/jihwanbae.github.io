@@ -1,4 +1,4 @@
 User-agent: *
 Disallow:
 
-Sitemap: BeigeHwan.github.io/jihwanbae.github.io/al-folio/sitemap.xml
+Sitemap: https://beigehwan.github.io/jihwanbae.github.io//al-folio/sitemap.xml
