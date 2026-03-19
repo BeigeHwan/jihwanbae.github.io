@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: <a href='https://engineering.purdue.edu/IE/academics/graduate'>Edwardson School of Industrial Engineering, Purdue University</a>. Grissom Hall, West Lafayette, IN 47907. bae129@purdue.edu.
+subtitle: Ph.D. Student at <a href='https://engineering.purdue.edu/IE/academics/graduate'>Edwardson School of Industrial Engineering, Purdue University</a>. 
 
 profile:
   align: right
