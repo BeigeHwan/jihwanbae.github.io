@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: Ph.D. Student at <a href='https://engineering.purdue.edu/IE/academics/graduate'>Edwardson School of Industrial Engineering, Purdue University</a>. 
+subtitle: Ph.D. Student at <a href='https://engineering.purdue.edu/IE/academics/graduate'> Edwardson School of Industrial Engineering, Purdue University</a>. 
 
 profile:
   align: right
