@@ -88,18 +88,31 @@
                     </div>
                   </li>
                 {% else %}
-                  {% assign parent_link = p.permalink | remove: 'index.html' %}
-                  <li class="nav-item {% if page.url == p.url %}active{% endif %}">
-                    {%- if p.permalink contains '://' -%}
-                      {%- assign url = p.permalink -%}
-                    {%- elsif p.permalink contains '/blog/' -%}
-                      {%- assign url = '/blog/' -%}
-                    {%- else -%}
-                      {%- assign url = p.url -%}
-                    {%- endif %}
+                  {%- if p.permalink contains '://' -%}
+                    {%- assign url = p.permalink -%}
+                  {%- elsif p.permalink contains '/blog/' -%}
+                    {%- assign url = '/blog/' -%}
+                  {%- else -%}
+                    {%- assign url = p.url -%}
+                  {%- endif -%}
+                  {%- assign is_active = false -%}
+                  {%- if url == '/' -%}
+                    {%- if page.url == '/' or page.url == '/index.html' -%}
+                      {%- assign is_active = true -%}
+                    {%- endif -%}
+                  {%- elsif url == '/blog/' -%}
+                    {%- if page.url contains '/blog/' -%}
+                      {%- assign is_active = true -%}
+                    {%- endif -%}
+                  {%- else -%}
+                    {%- if page.url == url -%}
+                      {%- assign is_active = true -%}
+                    {%- endif -%}
+                  {%- endif -%}
+                  <li class="nav-item {% if is_active %}active{% endif %}">
                     <a class="nav-link" href="{{ url | relative_url }}">
                       {{- p.title }}
-                      {% if page.url == p.url %}
+                      {% if is_active %}
                         <span class="sr-only">(current)</span>
                       {% endif %}
                     </a>
